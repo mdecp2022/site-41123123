@@ -57,7 +57,37 @@ print(a)</pre>
 </div>
 </div>
 </div>
-</div><h1>Brython</h1>
+</div>
+<h2>w6</h2>
+<p><a href="https://mdecp2022.github.io/site-41123123/content/Brython.html?src=https://gist.githubusercontent.com/41123123/13a2e1c0b153c644a4d802efb8d7e3e4/raw/d70e90217463cf5988f3147b24910d06e6e16f89/%25E9%25A1%25AF%25E7%25A4%25BA%25E5%25AD%25B8%25E5%2593%25A1%25E7%25B6%25B2%25E7%25AB%2599.py">顯示學員的網站</a></p>
+<pre></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
+
+brython_div1 = document["brython_div1"]
+"""
+brython_div1 &lt;= html.BUTTON("hello")
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= html.A("google", href="https://google.com")
+"""
+
+url = "https://mde.tw/studlist/2022fall/1a.txt"
+data = open(url).read().split("\n")
+mdecp2022 = "https://mdecp2022.github.io/site-"
+data = data[1:-1]
+for i in data:
+    stud = i.split("\t")
+    stud_num = stud[0]
+    github_acc = stud[1]
+    #print(stud_num, github_acc)
+    if github_acc == "":
+        github_acc = stud_num
+    site = mdecp2022 + github_acc
+    link = html.A(stud_num, href=site)
+    brython_div1 &lt;= link
+    brython_div1 &lt;= html.BR()
+    if github_acc == "":
+        github_acc = stud_num</pre>
+<p><br/><br/></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>

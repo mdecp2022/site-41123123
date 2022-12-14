@@ -141,18 +141,36 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW << <a href='HW.html'>Previous</a> <a href='w12.html'>Next</a> >> w12<br /><h1>w13</h1>
-<p><a href="https://mdecp2022.github.io/site-41123123/content/Brython.html?src=https://gist.githubusercontent.com/41123123/bddf5f3aa32f9c35a1f62254075ea20b/raw/59c462e23dcad585ec131be9efbfab2516060967/w13_temp_ex2.py">ex1</a></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
-f = c*9/5+32
-c = (f-32)*5/9
-'''
-c=input("攝氏溫度值")
-print(type(c))
-c = float(c)
-print("你輸入的攝氏溫度: " + str(c), "等於華氏溫度: " + str(c*9/5+32))</pre>
-<p></p>
-<br />HW << <a href='HW.html'>Previous</a> <a href='w12.html'>Next</a> >> w12</div>
+    <div id="tipue_search_content">w10 << <a href='w10.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>w6</h1>
+<p><a href="https://mdecp2022.github.io/site-41123123/content/Brython.html?src=https://gist.githubusercontent.com/41123123/13a2e1c0b153c644a4d802efb8d7e3e4/raw/d70e90217463cf5988f3147b24910d06e6e16f89/%25E9%25A1%25AF%25E7%25A4%25BA%25E5%25AD%25B8%25E5%2593%25A1%25E7%25B6%25B2%25E7%25AB%2599.py">顯示學員的網站</a></p>
+<pre></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
+
+brython_div1 = document["brython_div1"]
+"""
+brython_div1 &lt;= html.BUTTON("hello")
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= html.A("google", href="https://google.com")
+"""
+
+url = "https://mde.tw/studlist/2022fall/1a.txt"
+data = open(url).read().split("\n")
+mdecp2022 = "https://mdecp2022.github.io/site-"
+data = data[1:-1]
+for i in data:
+    stud = i.split("\t")
+    stud_num = stud[0]
+    github_acc = stud[1]
+    #print(stud_num, github_acc)
+    if github_acc == "":
+        github_acc = stud_num
+    site = mdecp2022 + github_acc
+    link = html.A(stud_num, href=site)
+    brython_div1 &lt;= link
+    brython_div1 &lt;= html.BR()
+    if github_acc == "":
+        github_acc = stud_num</pre>
+<p><br/><br/></p><br />w10 << <a href='w10.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
       <div class="container">
