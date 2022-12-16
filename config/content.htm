@@ -19,12 +19,14 @@
 <li>變數, 字串, 整數, 浮點數, 數列, Tuple, Dictionary, 函式, 重複迴圈, class, 物件導向, 資料庫, 這些名詞對您而言代表甚麼?</li>
 <li>A:</li>
 </ul>
-<h2>w14</h2>
 <!-- 
 在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
 -->
+<h2>w14</h2>
+<p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
+</p>
 <!-- 啟動 Brython -->
 <p>
 <script>
@@ -37,7 +39,7 @@ brython({debug:1, pythonpath:['/static/','/downloads/py/']});
 --></p>
 <!-- 利用 html 建立一個 id="btn1" 的按鈕 -->
 <p><button id="btn1">取使用者輸入</button></p>
-<p>這個按鈕，<span>輸入甚麼數字就會跑出來對應的數字</span></p>
+<div id="brython_div">這個按鈕按下去並輸入數字，就會跑出對應的數字。</div>
 <p>
 <script type="text/python">
 from browser import html, document
