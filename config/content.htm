@@ -2,6 +2,13 @@
 <p>cmsite: wcms use <a href="https://github.com/mdecycu/cmsimde">https://github.com/mdecycu/cmsimde</a> as submodule</p>
 <p>我的倉儲<a href="https://github.com/mdecp2022/site-41123123">https://github.com/mdecp2022/site-41123123</a></p>
 <h1>HW</h1>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
 <h2>w15</h2>
 <ul>
 <li>1.為何學習計算機程式需要建立個人倉儲?</li>
@@ -216,7 +223,8 @@ grid(origx, origy, w, h, wnum, hnum, pixel=1, color="black")
  
 doc["power"].bind("click", launchAnimation)
 #browser.timer.set_interval(game, 100)</pre>
-<p></p><h2>w14</h2>
+<p></p>
+<h2>w14</h2>
 <p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -256,7 +264,8 @@ def get_input(env):
 # 讓使用者 click 後會經由瀏覽器中的 event 通知執行 get_input 函式
 document["btn1"].bind('click', get_input)
 </script>
-</p><h2>w13</h2>
+</p>
+<h2>w13</h2>
 <p><a href="https://mdecp2022.github.io/site-41123123/content/Brython.html?src=https://gist.githubusercontent.com/41123123/bddf5f3aa32f9c35a1f62254075ea20b/raw/59c462e23dcad585ec131be9efbfab2516060967/w13_temp_ex2.py">ex1</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
 f = c*9/5+32
@@ -433,8 +442,27 @@ for i in data[:5]:
     link = html.A(stud_num, href=site)
     brython_div1 &lt;= link
     brython_div1 &lt;= html.BR()</pre>
-<p><br/><br/><br/></p>
-<h1>Brython</h1>
+<p><br/><br/><br/><br/><br/><br/></p>
+<h2>w5</h2>
+<p><a href="https://mdecp2022.github.io/site-41123123/content/Brython.html?src=https://gist.githubusercontent.com/41123123/5506f11258328b9abea27f1f97150234/raw/fb12b53dcd1f650a9dce17ad12f749bdf7c8b21c/w5_hw.py">亂數產生器</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 導入亂數模組
+import random
+# 導入字串模組
+import string
+# 利用 def 關鍵字定義函式
+# 函式的輸入變數可以設定初始值
+def password_generator(size=4, chars=string.ascii_lowercase + string.digits):
+    # 函式內以多行註解說明函式功能
+    """Generate random password
+    """
+    # 利用 return 關鍵字將所產生的亂數字串傳回
+    return ''.join(random.choice(chars) for _ in range(size))
+# 建立一個變數與隨後的字串對應
+pass_string = "abcdefghkmnpqrstuwxyz123456789"
+# 利用重複迴圈呼叫 password_generator() 函式 10 次
+for i in range(10):
+    print(password_generator(4, pass_string))</pre>
+<p></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>

@@ -141,18 +141,26 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w14 << <a href='w14.html'>Previous</a> <a href='w12.html'>Next</a> >> w12<br /><h1>w13</h1>
-<p><a href="https://mdecp2022.github.io/site-41123123/content/Brython.html?src=https://gist.githubusercontent.com/41123123/bddf5f3aa32f9c35a1f62254075ea20b/raw/59c462e23dcad585ec131be9efbfab2516060967/w13_temp_ex2.py">ex1</a></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
-f = c*9/5+32
-c = (f-32)*5/9
-'''
-c=input("攝氏溫度值")
-print(type(c))
-c = float(c)
-print("你輸入的攝氏溫度: " + str(c), "等於華氏溫度: " + str(c*9/5+32))</pre>
-<p></p>
-<br />w14 << <a href='w14.html'>Previous</a> <a href='w12.html'>Next</a> >> w12</div>
+    <div id="tipue_search_content">w6 << <a href='w6.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>w5</h1>
+<p><a href="https://mdecp2022.github.io/site-41123123/content/Brython.html?src=https://gist.githubusercontent.com/41123123/5506f11258328b9abea27f1f97150234/raw/fb12b53dcd1f650a9dce17ad12f749bdf7c8b21c/w5_hw.py">亂數產生器</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 導入亂數模組
+import random
+# 導入字串模組
+import string
+# 利用 def 關鍵字定義函式
+# 函式的輸入變數可以設定初始值
+def password_generator(size=4, chars=string.ascii_lowercase + string.digits):
+    # 函式內以多行註解說明函式功能
+    """Generate random password
+    """
+    # 利用 return 關鍵字將所產生的亂數字串傳回
+    return ''.join(random.choice(chars) for _ in range(size))
+# 建立一個變數與隨後的字串對應
+pass_string = "abcdefghkmnpqrstuwxyz123456789"
+# 利用重複迴圈呼叫 password_generator() 函式 10 次
+for i in range(10):
+    print(password_generator(4, pass_string))</pre>
+<p></p><br />w6 << <a href='w6.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
       <div class="container">
